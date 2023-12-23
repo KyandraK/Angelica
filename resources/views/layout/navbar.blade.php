@@ -8,7 +8,7 @@
     </ul>
 
     <div class="flex items-center gap-3">
-        <a href="/profile">
+        <a href="/profile/profile">
             <img src={{ asset('/img/Ellipse338.png') }} alt="">
         </a>
         <a href="/cart">

@@ -43,31 +43,37 @@
 
     <div class="flex flex-col my-6 justify-between px-[10em]">
         <div class="flex gap-6 mx-auto relative z-20 -top-[50px]">
-            <div class="flex gap-3 px-12 bg-white py-3 shadow-xl">
-                <span class="material-symbols-outlined font-semibold text-[3em]">
-                    phone_in_talk
-                </span>
-                <div class="flex flex-col">
-                    <h1 class="font-bold">Call Us</h1>
-                    <p class="text-gray-400">+6281315666669</p>
+            <div class="w-[18em] bg-white py-3 shadow-xl rounded-lg">
+                <div class="flex gap-3 mx-auto w-fit">
+                    <span class="material-symbols-outlined font-semibold text-[3em]">
+                        phone_in_talk
+                    </span>
+                    <div class="flex flex-col">
+                        <h1 class="font-bold">Call Us</h1>
+                        <p class="text-gray-400">+6281315666669</p>
+                    </div>
                 </div>
             </div>
-            <div class="flex gap-3 px-12 bg-white py-3 shadow-xl">
-                <span class="material-symbols-outlined font-semibold text-[3em]">
-                    mail
-                </span>
-                <div class="flex flex-col">
-                    <h1 class="font-bold">Email Us</h1>
-                    <p class="text-gray-400">+angeli.cafe@gmail.com</p>
+            <div class="w-[18em] bg-white py-3 shadow-xl rounded-lg">
+                <div class="flex gap-3 mx-auto w-fit">
+                    <span class="material-symbols-outlined font-semibold text-[3em]">
+                        mail
+                    </span>
+                    <div class="flex flex-col">
+                        <h1 class="font-bold">Email Us</h1>
+                        <p class="text-gray-400">angeli.cafe@gmail.com</p>
+                    </div>
                 </div>
             </div>
-            <div class="flex gap-3 px-12 bg-white py-3 shadow-xl">
-                <span class="material-symbols-outlined font-semibold text-[3em]">
-                    location_on
-                </span>
-                <div class="flex flex-col">
-                    <h1 class="font-bold">Visit Us</h1>
-                    <p class="text-gray-400">+Jalan Angkasa 1 No. 2</p>
+            <div class="w-[18em] bg-white py-3 shadow-xl rounded-lg">
+                <div class="flex gap-3 mx-auto w-fit">
+                    <span class="material-symbols-outlined font-semibold text-[3em]">
+                        location_on
+                    </span>
+                    <div class="flex flex-col">
+                        <h1 class="font-bold">Visit Us</h1>
+                        <p class="text-gray-400">Jalan Angkasa 1 No. 2</p>
+                    </div>
                 </div>
             </div>
 
@@ -75,7 +81,10 @@
 
         <div class="flex gap-4 mb-6">
             <div class="w-1/2 h-full">
-                <iframe class="w-full border-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.4053664088794!2d106.83961836614783!3d-6.1560981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5bff9974157%3A0x460361ce48b502d1!2sAngelica%20Cafe!5e0!3m2!1sen!2sid!4v1702377410615!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="w-full border-2"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.4053664088794!2d106.83961836614783!3d-6.1560981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5bff9974157%3A0x460361ce48b502d1!2sAngelica%20Cafe!5e0!3m2!1sen!2sid!4v1702377410615!5m2!1sen!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div>
                 <form action="post" class="flex flex-col gap-4 border-2 rounded-xl p-4 h-full">
@@ -100,24 +109,7 @@
 
     {{-- FOOTER --}}
     </div>
-    <div class="w-full h-[40vh] bg-[#EDDBC7] flex justify-between py-6 px-[10em]">
-        <div class="w-1/2">
-            <img src={{ asset('/img/Logo.png') }} alt="">
-            <p class="text-[#61677A] mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. </p>
-
-            <p class="text-[#61677A] mt-6">© 2023 Angelica Cafe | All rights reserved</p>
-        </div>
-        <div>
-            <ul class="flex gap-3">
-                <li><a href="" class="font-bold text-xl text-[#85581F]">Home</a></li>
-                <li><a href="" class="font-bold text-xl text-[#85581F]">Menu</a></li>
-                <li><a href="" class="font-bold text-xl text-[#85581F]">About Us</a></li>
-                <li><a href="" class="font-bold text-xl text-[#85581F]">Contact</a></li>
-            </ul>
-        </div>
-    </div>
+    @include('layout.footer')
 
 
 

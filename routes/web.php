@@ -48,3 +48,15 @@ Route::get('/checkout', function () {
 Route::get('/cart', function () {
     return view('cart');
 });
+Route::get('/profile/profile', function () {
+    return view('/profile/profile');
+});
+Route::get('/profile/address', function () {
+    return view('/profile/address');
+});
+Route::get('/profile/transaction', function () {
+    return view('/profile/transaction');
+});
+Route::get('/coba', function () {
+    return view('coba');
+});
