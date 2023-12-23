@@ -52,13 +52,18 @@
             @for ($i = 0; $i < 8; $i++)
                 <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
                     <div class="card card-compact w-full bg-base-100 shadow-xl">
-                        <figure><img class="object-cover" src={{ asset('/img/Menu_makanan.png') }} alt="Shoes" />
+                        <figure>
+                            <div class="absolute top-[10px] right-[15px]">
+                                <h1 class="py-2 text-semibold px-3 bg-white text-gray-400 rounded-xl">Rp.30.000</h1>
+                            </div>
+                            <img class="object-cover" src={{ asset('/img/Menu_makanan.png') }} alt="Shoes" />
                         </figure>
                         <div class="card-body">
-                            <h2 class="card-title">Nasi Kotak </h2>
+                            <h2 class="card-title font-bold">Nasi Kotak </h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            <div class="card-actions justify-end">
-                                <button class="btn text-white bg-[#764507]">Add to cart</button>
+                            <div class="card-actions justify-start">
+                                <button class="py-2 px-3 rounded-xl font-bold text-white bg-[#764507]">Add to
+                                    cart</button>
                             </div>
                         </div>
                     </div>
