@@ -33,23 +33,26 @@
             <div class="flex flex-col gap-4 ">
                 <img class="h-32 -mb-3 object-none" src={{ asset('/img/Logo.png') }} alt="">
                 <h1 class="font-bold text-2xl text-center">Sign Up</h1>
-                <div class="py-2 text-center border-2 font-bold bg-white rounded-xl">
+                {{-- <div class="py-2 text-center border-2 font-bold bg-white rounded-xl">
                     <h1>Continue with google</h1>
-                </div>
+                </div> --}}
                 <div class="divider -my-1">OR</div>
-                <form action="post" class="flex flex-col gap-4  rounded-xl h-full">
+                <form action="{{route('register')}}" method="POST" class="flex flex-col gap-4  rounded-xl h-full">
+                    @csrf
+                    @method('POST')
                     <div class="flex gap-4 w-full mb-3">
-                        <input type="text" placeholder="First Name" class="border-2 h-10 p-3 rounded-lg w-full" />
-                        <input type="text" placeholder="Last Name" class="border-2 h-10 p-3 rounded-lg w-full" />
+                        <input type="text" name="first_name" placeholder="First Name" class="border-2 h-10 p-3 rounded-lg w-full" />
+                        <input type="text" name="last_name" placeholder="Last Name" class="border-2 h-10 p-3 rounded-lg w-full" />
                     </div>
-                    <input type="text" placeholder="Email" class="border-2 h-10 p-3 rounded-lg w-full" />
-                    <input type="text" placeholder="Phone" class="border-2 h-10 p-3 rounded-lg w-full" />
-                    <input type="password" placeholder="Password" class="border-2 h-10 p-3 rounded-lg w-full" />
-                    <input type="password" placeholder="Confirm Password" class="border-2 h-10 p-3 rounded-lg w-full" />
+                    <input type="text" name="email" placeholder="Email" class="border-2 h-10 p-3 rounded-lg w-full" />
+                    <input type="text" name="phone" placeholder="Phone" class="border-2 h-10 p-3 rounded-lg w-full" />
+                    <input type="password" name="password" placeholder="Password" class="border-2 h-10 p-3 rounded-lg w-full" />
+                    <input type="password" name="confirm_password" placeholder="Confirm Password" class="border-2 h-10 p-3 rounded-lg w-full" />
+                    <button class="rounded-lg w-[5em] font-semibold py-1 text-center bg-[#764507] text-white" >Sign Up</button>
                 </form>
                 <div class="flex justify-between items-end">
-                    <a href="/dashboard"
-                        class="rounded-lg w-[5em] font-semibold py-1 text-center bg-[#764507] text-white">Sign Up</a>
+                    {{-- <a href="/dashboard"
+                        >Sign Up</a> --}}
                     <p class="text-center text-gray-400">Already have an account? <a href="/"
                             class="underline-offset-2 text-[#764507] underline">Login here</a></p>
                 </div>

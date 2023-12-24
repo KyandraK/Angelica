@@ -116,11 +116,16 @@
                         <div class="divider -my-1"></div>
                         <div class="flex justify-between font-bold">
                             <h1>Total</h1>
-                            <h1>Rp61.088</h1>
+                            <h1>{{$total}}</h1>
                         </div>
 
                     </div>
-                    <a href="/checkout" class="btn bg-[#764507] text-white font-bold py-3 rounded-xl">Pay</a>
+                    <form method="POST" action="{{ route('checkout.order') }}">
+                        @csrf
+                        <!-- Isi formulir jika diperlukan -->
+                        <button type="submit" class="btn bg-[#764507] text-white font-bold py-3 rounded-xl">Pay</button>
+                    </form>
+                    {{-- <a href="{{route('checkout.order')}}" class="btn bg-[#764507] text-white font-bold py-3 rounded-xl">Pay</a> --}}
                 </div>
             </div>
         </div>

@@ -47,53 +47,37 @@
         <div class="divider"></div>
         <div class="flex">
             <div class="flex flex-col w-[70%] justify-between gap-4">
+                @foreach ($cart as $item)
                 <div class="flex w-full gap-6 justify-between items-center">
                     <div class="flex gap-3 items-center">
                         <img class="h-32 w-32" src={{ asset('/img/Menu_makanan.png') }} alt="">
-                        <h1 class="font-bold text-xl">Nasi Kotak</h1>
+                        <h1 class="font-bold text-xl">{{$item['name']}}</h1>
                     </div>
                     <div class="flex items-center gap-2">
                         <button
                             class="w-5 h-5 flex items-center justify-center border-2 rounded-sm font-bold">-</button>
-                        <h1>1</h1>
+                        <h1>{{$item['quantity']}}</h1>
                         <button
                             class="w-5 h-5 flex items-center justify-center border-black border-2 rounded-sm font-bold">+</button>
                     </div>
-                    <p class="text-gray-400">Rp.30.000</p>
+                    <p class="text-gray-400">{{$item['price']}}</p>
                     <span class="material-symbols-outlined mr-8">
                         close
                     </span>
                 </div>
-                <div class="flex w-full gap-6 justify-between items-center">
-                    <div class="flex gap-3 items-center">
-                        <img class="h-32 w-32" src={{ asset('/img/Menu_makanan.png') }} alt="">
-                        <h1 class="font-bold text-xl">Nasi Kotak</h1>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <button
-                            class="w-5 h-5 flex items-center justify-center border-2 rounded-sm font-bold">-</button>
-                        <h1>1</h1>
-                        <button
-                            class="w-5 h-5 flex items-center justify-center border-black border-2 rounded-sm font-bold">+</button>
-                    </div>
-                    <p class="text-gray-400">Rp.30.000</p>
-                    <span class="material-symbols-outlined mr-8">
-                        close
-                    </span>
-                </div>
-
+                @endforeach
             </div>
             <div class="border-2 rounded-xl flex flex-col p-4 w-[30%]">
                 <h1 class="font-bold">Order Sumary</h1>
                 <div class="divider -my-[0.5px]"></div>
                 <div class="text-gray-400 flex justify-between">
                     <h1>Subtotal</h1>
-                    <h1>Rp60.000</h1>
+                    <h1>{{$subtotal}}</h1>
                 </div>
                 <div class="divider -my-[0.5px]"></div>
                 <div class="font-semibold flex justify-between mb-3">
                     <h1>Total</h1>
-                    <h1>Rp60.000</h1>
+                    <h1>{{$subtotal}}</h1>
                 </div>
                 <a href="/checkout" class="btn bg-[#764507] text-white font-bold py-3 rounded-xl">Checkout</a>
             </div>

@@ -31,24 +31,31 @@
         <div class="flex flex-col gap-4 w-[30%]">
             <img class="h-32 object-none" src={{ asset('/img/Logo.png') }} alt="">
             <h1 class="font-bold text-2xl text-center">Login to your account</h1>
-            <div class="py-2 text-center font-bold bg-white rounded-xl">
+            {{-- <div class="py-2 text-center font-bold bg-white rounded-xl">
                 <h1>Continue with google</h1>
-            </div>
+            </div> --}}
             <div class="divider">OR</div>
-            <div class="flex flex-col gap-4">
-                <input type="text" placeholder="Email" class="border-2 h-10 p-3 rounded-lg w-full" />
-                <input type="password" placeholder="Password" class="border-2 h-10 p-3 rounded-lg w-full" />
-            </div>
-            <div class="flex justify-between items-center">
-                <div class="form-control">
-                    <label class="label cursor-pointer flex gap-2 items-center justify-center">
-                      <p class="label-text">Remember me</p>
-                      <input type="checkbox" class="" />
-                    </label>
-                  </div>
-                  <a href="/forgot" class="text-blue-700">Forgot Password?</a>
-            </div>
-            <a href="/dashboard" class="rounded-lg w-[5em] font-semibold py-1 text-center bg-[#764507] text-white">Login</a>
+            <form action="{{route('login')}}" method="POST">
+                @method('POST')
+                @csrf
+                <div class="flex flex-col gap-4">
+                    <label for="">Email</label>
+                    <input type="text" name="email" placeholder="Email" class="border-2 h-10 p-3 rounded-lg w-full" />
+                    <label for="">Password</label>
+                    <input type="password" name="password" placeholder="Password" class="border-2 h-10 p-3 rounded-lg w-full" />
+                </div>
+                <div class="flex justify-between items-center">
+                    <div class="form-control">
+                        <label class="label cursor-pointer flex gap-2 items-center justify-center">
+                        <p class="label-text">Remember me</p>
+                        <input type="checkbox" class="" />
+                        </label>
+                    </div>
+                    <a href="/forgot" class="text-blue-700">Forgot Password?</a>
+                </div>
+                <button class="rounded-lg w-[5em] font-semibold py-1 text-center bg-[#764507] text-white">Login</button>
+            </form>
+           
             <p class="text-center text-gray-400">Don’t have an account? <a href="/signup" class="underline-offset-2 text-[#764507] underline">Sign up here</a></p>
         </div>
     </div>
