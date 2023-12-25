@@ -1,12 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\MenuController;
-use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\TransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,8 +42,7 @@ Route::get('/', function () {
 
 Route::get('/menu',[MenuController::class, 'index'])->name('indexMenu');
 
-Route::get('/cart/{id}', [CartController::class, 'addItemToCart'])->name('cart.add');
-Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
+
 
 Route::get('/about', function () {
     return view('about');
@@ -70,18 +71,40 @@ Route::prefix('admin')->group(function () {
 
     // Route untuk mengelola produk
     Route::get('produks', [ProdukController::class, 'index']);
-    Route::get('produks/create', [ProdukController::class, 'create']);
+    Route::get('produks/create', [ProdukController::class, 'create'])->name('admin.produks.create');;
     Route::post('produks/store', [ProdukController::class, 'store'])->name('admin.produks.store');
     Route::get('produks/update/{id}', [ProdukController::class, 'edit']);
     Route::put('produks/update/{id}', [ProdukController::class, 'update'])->name('admin.produks.update');
     Route::delete('produks/delete/{id}',[ProdukController::class, 'delete'])->name('admin.produks.delete');
+    Route::get('orders',[OrderController::class,'index'])->name('admin.orders.indes');
+    Route::get('orders/detail/{id}',[OrderController::class,'detailOrder'])->name('admin.orders.detail');
+    Route::put('orders/status/update/{id}',[OrderController::class,'updateStatusOrder'])->name('admin.orders.update.status');
     
     // Tambahkan rute lainnya sesuai kebutuhan admin
 });
 
 
-Route::get('/profile',[UserController::class, 'profile'])->name('profile.user');
+Route::middleware(['auth'])->group(function () {
+    // Rute-rute yang memerlukan autentikasi di sini
+    Route::get('/profile', [UserController::class, 'profile'])->name('profile.user');
 
-Route::put('/profile/update', [UserController::class, 'profileUpdate'])->name('profile.update');
-Route::get('/checkout', [CartController::class, 'checkout']);
-Route::post('/checkout/order', [CartController::class, 'order'])->name('checkout.order');
+    Route::put('/profile/update', [UserController::class, 'profileUpdate'])->name('profile.update');
+    Route::get('/checkout', [CartController::class, 'checkout']);
+    Route::post('/checkout/order', [CartController::class, 'order'])->name('checkout.order');
+    Route::get('/profile/address', [UserController::class,'showAddress'])->name('address.index');
+    Route::get('/profile/address/edit/{id}', [UserController::class,'editAddress'])->name('address.edit');
+    Route::put('/profile/address/edit/{id}', [UserController::class,'updateAddress'])->name('address.update');
+    Route::get('/profile/address/add', [UserController::class,'addAddress'])->name('address.add');
+    Route::post('/profile/address/add', [UserController::class,'storeAddress'])->name('storeAddress');
+    Route::put('/profile/update-profile-picture', [UserController::class, 'updateProfilePicture'])->name('profile.update-profile-picture');
+    Route::get('/cart/{id}', [CartController::class, 'addItemToCart'])->name('cart.add');
+    Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
+    Route::get('/profile/transaction',[TransactionController::class,'showOrder'])->name('profile.transaction');
+});
+
+
+
+// Route::get('/profile/transaction', function () {
+//     return view('/profile/transaction');
+// });
+

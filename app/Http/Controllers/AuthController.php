@@ -26,7 +26,7 @@ class AuthController extends Controller
         if($validate['password'] ==  $request->confirm_password){
             $password = bcrypt($validate['password']);
         }else{
-            return 'Tolong cek kembali password yang anda masukan';
+            return redirect('/register')->with('failed','Akun anda gagal didaftarkan ');
         }
 
         $user = User::create([
@@ -42,7 +42,7 @@ class AuthController extends Controller
         ]);
 
 
-        return 'berhasil mendaftarkan akun silahkan login';
+        return redirect('/login')->with('success','Akun anda berhasil didaftarkan silahkan login');
 
 
     }
@@ -57,10 +57,10 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Jika berhasil login, alihkan ke halaman yang sesuai
-            return "Selamat anda berhasil login";
+            return redirect('/profile');
            
         }else{
-            return "Gagal login";
+            return redirect()->back()->with('failed', 'Login gagal silahkan cek ulang');
         }
     }
 

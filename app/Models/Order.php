@@ -19,9 +19,9 @@ class Order extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    // Definisikan relasi antara model Order dan model OrderDetail jika diperlukan
-    // public function orderDetails()
-    // {
-    //     return $this->hasMany(OrderDetail::class, 'order_id');
-    // }
+    //Definisikan relasi antara model Order dan model OrderDetail jika diperlukan
+    public function orderDetails()
+    {
+        return $this->hasMany(OrderDetail::class, 'order_id');
+    }
 }

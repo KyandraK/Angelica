@@ -38,7 +38,7 @@
 
     {{-- OUR MENU --}}
     <div class="h-screen px-32 pt-[8em]">
-        <a href="/dashboard" class="flex items-center gap-2 ">
+        <a href="/menu" class="flex items-center gap-2 ">
             <span class="material-symbols-outlined font-bold text-[#764507]">
                 arrow_back
             </span>

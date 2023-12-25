@@ -43,12 +43,22 @@
     {{-- OUR MENU --}}
 
     <div class="flex flex-col justify-center w-full mt-[6em]">
-        <ul class="mx-auto flex gap-4 font-bold mb-[2em]">
+        {{-- <ul class="mx-auto flex gap-4 font-bold mb-[2em]">
             <li><a href="">Nasi Kotak</a></li>
             <li><a href="">Snack Box</a></li>
             <li><a href="">Coffee Break</a></li>
             <li><a href="">Lainnya</a></li>
-        </ul>
+        </ul> --}}
+
+        @if(session('success'))
+        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-2 rounded relative" role="alert">
+            <strong class="font-bold">Success!</strong>
+            <span class="block sm:inline">{{ session('success') }}</span>
+            <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+                <svg class="fill-current h-6 w-6 text-green-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.293 5.293a1 1 0 011.414 0l.293.293V7a1 1 0 01-2 0V5.586l.293-.293a1 1 0 111.414 1.414L13 7.414l1.293-1.293a1 1 0 111.414 1.414L14.414 9l1.293 1.293a1 1 0 11-1.414 1.414L13 10.414l-1.293 1.293a1 1 0 11-1.414-1.414L11.586 9l-1.293-1.293a1 1 0 010-1.414 1 1 0 011.414 0L13 7.586l1.293-1.293z"/></svg>
+            </span>
+        </div>
+        @endif
         <div class="w-full flex flex-wrap gap-3 mt-3 justify-center mb-8">
             @foreach ($produk as $item)
                 <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
@@ -69,7 +79,7 @@
                 </div>
             @endforeach
         </div>
-        <ul class="text-black">
+        {{-- <ul class="text-black">
             <li>
                 <p>1</p>
             </li>
@@ -82,7 +92,7 @@
             <li>
                 <p>1</p>
             </li>
-        </ul>
+        </ul> --}}
     </div>
 
     {{-- OUR MENU --}}
@@ -92,24 +102,7 @@
 
     {{-- FOOTER --}}
     </div>
-    <div class="w-full h-[40vh] bg-[#EDDBC7] flex justify-between py-6 px-[10em]">
-        <div class="w-1/2">
-            <img src={{ asset('/img/Logo.png') }} alt="">
-            <p class="text-[#61677A] mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. </p>
-
-            <p class="text-[#61677A] mt-6">© 2023 Angelica Cafe | All rights reserved</p>
-        </div>
-        <div>
-            <ul class="flex gap-3">
-                <li><a href="" class="font-bold text-xl text-[#85581F]">Home</a></li>
-                <li><a href="" class="font-bold text-xl text-[#85581F]">Menu</a></li>
-                <li><a href="" class="font-bold text-xl text-[#85581F]">About Us</a></li>
-                <li><a href="" class="font-bold text-xl text-[#85581F]">Contact</a></li>
-            </ul>
-        </div>
-    </div>
+    @include('layout.footer')
 
 
 </body>

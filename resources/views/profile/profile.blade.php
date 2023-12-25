@@ -32,24 +32,23 @@
     {{-- NAVBAR --}}
 
     {{-- OUR MENU --}}
-    
     <div class="h-full pt-[7em]">
         <div class="flex flex-col border-2 rounded-xl px-6 mx-32 py-4 mb-6">
             <div class="flex gap-4">
-                <a href="">
+                <a href="/profile">
                     <h1 class="font-semibold text-xl">Personal Profile</h1>
                 </a>
-                <a href="">
+                <a href="/profile/address">
                     <h1 class="font-semibold text-xl">Address List</h1>
                 </a>
-                <a href="">
+                <a href="/profile/transaction">
                     <h1 class="font-semibold text-xl">Transaction List</h1>
                 </a>
             </div>
             <div class="divider"></div>
     
-            @if(session('success'))
-        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-2 rounded relative" role="alert">
+        @if(session('success'))
+        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-2 rounded relative mb-4" role="alert">
             <strong class="font-bold">Success!</strong>
             <span class="block sm:inline">{{ session('success') }}</span>
             <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
@@ -79,18 +78,44 @@
                 </div>
                 <div class="w-[20%] h-full flex">
                     <div class="border-2 w-full h-full py-4 rounded-xl flex flex-col gap-3 justify-center items-center">
+                        <img class="h-32 rounded-full" src="{{ asset('storage/'.$user->image) }}" alt="Profile Picture">
+                        <form action="{{ route('profile.update-profile-picture') }}" method="POST" enctype="multipart/form-data">
+                            @method('put')
+                            @csrf
+                            <input type="file" id="profilePicture" name="profilePicture" accept=".jpeg, .jpg, .png"
+                                class="hidden">
+                            <p class="text-xs text-gray-400 mx-6">Picture size: max. 1 MB Picture format: .JPEG, .PNG</p>
+                            <div class="flex justify-center items-center">
+                                <label for="profilePicture" class="cursor-pointer border-2 px-6 py-2 rounded-xl font-bold text-xl text-gray-400 bg-transparent">
+                                    Choose File
+                                </label>
+                                <button type="submit" id="saveProfilePicture"
+                                    class="border-2 px-6 py-2 rounded-xl font-bold text-xl text-white bg-blue-500 ml-4">
+                                    Save
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                              
+                
+                {{-- <div class="w-[20%] h-full flex">
+                    <div class="border-2 w-full h-full py-4 rounded-xl flex flex-col gap-3 justify-center items-center">
                         <img class="h-32" src="{{ asset('/img/profilepicture.png') }}" alt="">
                         <button class="border-2 px-6 py-2 rounded-xl font-bold text-xl text-gray-400 bg-transparent">Change</button>
                         <p class="text-xs text-gray-400 mx-6">Picture size: max. 1 MB Picture format: .JPEG, .PNG</p>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
-    
     {{-- FOOTER --}}
     @include('layout.footer');
     {{-- FOOTER --}}
+
+    
 </body>
+
+
 
 </html>

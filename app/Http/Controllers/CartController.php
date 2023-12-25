@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use App\Models\Produk;
+use App\Models\Address;
 use App\Models\OrderDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -64,7 +65,12 @@ class CartController extends Controller
         $user = Auth::user();
         $cart = $request->session()->get('cart_' . $user->id, []);
 
+        
+        $addresses = Address::with('user')
+        ->where('user_id', $user->id)
+        ->get();
 
+        
         $subtotal = 0;
     
         foreach ($cart as $item) {
@@ -74,7 +80,8 @@ class CartController extends Controller
     //     // Misalnya, Anda bisa mengirimkan data keranjang ke tampilan checkout:
     //    dd($cart);
         return view('checkout',[
-            'total' => $subtotal
+            'total' => $subtotal,
+            'address' => $addresses
         ]);
     }
 
@@ -132,7 +139,7 @@ class CartController extends Controller
  
          // Redirect pengguna ke halaman terima kasih atau ringkasan pesanan
         //  return redirect()->route('order.success')->with('success', 'Pesanan Anda berhasil ditempatkan.');
-        return 'berhasil';
+        return redirect()->route('profile.transaction')->with('success', 'Terima kasih ! order anda sedang diproses');
      
 
     }

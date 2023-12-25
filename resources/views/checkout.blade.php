@@ -49,22 +49,24 @@
         <div class="divider"></div>
         <div class="flex gap-4">
             {{-- Shipping Address --}}
+            @foreach ($address as $alamat)
             <div class="flex flex-col w-[50%]">
                 <h1 class="text-gray-400">Shipping Address</h1>
                 <div class="divider my-2"></div>
-                <h1 class="font-bold">Kyandra Kusuma<span class="font-regular text-gray-400">(Rumah)</span></h1>
-                <p class="text-gray-400">62123456789</p>
-                <p class="text-gray-400">Jl. Telekomunikasi. 1, Kec. Dayeuhkolot, Kabupaten Bandung,
-                    Jawa Barat 40257</p>
+                {{-- <h1 class="font-bold">{{$alamat->user->name}}<span class="font-regular text-gray-400">(Rumah)</span></h1> --}}
+                <h1 class="font-bold">{{$alamat->user->name}}</h1>
+                <p class="text-gray-400">{{$alamat->user->phone_number}}</p>
+                <p class="text-gray-400">{{ $alamat->street }}, {{ $alamat->city }}, {{ $alamat->state }} {{ $alamat->postal_code }}</p>
                 <div class="divider my-2"></div>
-                <button class="btn btn-sm font-bold text-center">Choose Other Address</button>
+                <a href="{{ route('address.edit', $alamat->id) }}" class="btn btn-sm font-bold text-center">Edit address</a>
             </div>
+            @endforeach
             {{-- Shipping Address --}}
             <div class="flex flex-col gap-4 w-[50%]">
                 <div class="border-2 rounded-xl flex flex-col p-4">
                     <div class="flex justify-between">
                         <h1 class="font-bold">Payment Method</h1>
-                        <h1 class="text-[#4CBB17]">See All</h1>
+                        {{-- <h1 class="text-[#4CBB17]">See All</h1> --}}
                     </div>
                     <div class="divider my-2"></div>
                     <div class="flex flex-col gap-2 mb-4">
@@ -79,6 +81,8 @@
                             <div class="flex gap-2 items-center">
                                 <img src={{ asset('/img/bank/Mandiri.png') }} alt="">
                                 <h1 class="font-semibold text-gray-500">Mandiri</h1>
+                                <br>
+                                
                             </div>
                             <input type="radio" name="radio-2" class="radio radio-primary" />
                         </div>
@@ -92,12 +96,12 @@
                     </div>
                 </div>
                 <div class="border-2 rounded-xl flex flex-col p-4">
-                    <div class="flex justify-between">
+                    {{-- <div class="flex justify-between">
                         <h1 class="font-bold">Order Summary</h1>
-                    </div>
-                    <div class="divider my-1"></div>
+                    </div> --}}
+                    {{-- <div class="divider my-1"></div> --}}
                     <div class="flex flex-col gap-2 mb-4">
-                        <div class="flex justify-between text-gray-600">
+                        {{-- <div class="flex justify-between text-gray-600">
                             <h1>Subtotal</h1>
                             <h1>Rp60.000</h1>
                         </div>
@@ -112,8 +116,8 @@
                         <div class="flex justify-between text-gray-600">
                             <h1>Unique Code</h1>
                             <h1>Rp88</h1>
-                        </div>
-                        <div class="divider -my-1"></div>
+                        </div> --}}
+                        {{-- <div class="divider -my-1"></div> --}}
                         <div class="flex justify-between font-bold">
                             <h1>Total</h1>
                             <h1>{{$total}}</h1>
@@ -123,7 +127,9 @@
                     <form method="POST" action="{{ route('checkout.order') }}">
                         @csrf
                         <!-- Isi formulir jika diperlukan -->
-                        <button type="submit" class="btn bg-[#764507] text-white font-bold py-3 rounded-xl">Pay</button>
+                        <button type="submit" class="btn bg-[#764507] text-white font-bold py-3 rounded-xl">Konfirmasi sudah bayar</button>
+                        <a href="" class="btn bg-red-500 text-white font-bold py-3 rounded-xl">Kembali</a>
+
                     </form>
                     {{-- <a href="{{route('checkout.order')}}" class="btn bg-[#764507] text-white font-bold py-3 rounded-xl">Pay</a> --}}
                 </div>
