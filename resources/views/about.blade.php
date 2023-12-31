@@ -47,9 +47,9 @@
                 <img class="h-3" src={{ asset('img/garisAboutUs.png') }} alt="">
             </div>
             <img src={{ asset('/img/AngelicaCatering.png') }} alt="" class="my-4">
-            <p class="w-[60%]">Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices.</p>
+            <p class="w-[60%]">Di Angelica Cafe, kisah kami dimulai dari impian bersama untuk membawa kelezatan dan keindahan cita rasa ke setiap perayaan hidup. Dengan keahlian kuliner dan semangat yang menyala-nyala, kami memutuskan untuk mendirikan Angelica Cafe sebagai wujud dari visi kami tentang menyatukan rasa dan seni dalam setiap hidangan.
+
+                Dibangun di atas prinsip kualitas tak tertandingi, Angelica Cafe selalu berkomitmen untuk menyajikan hidangan-hidangan yang disiapkan dengan teliti menggunakan bahan-bahan segar dan berkualitas tinggi. Setiap menu adalah hasil dari eksplorasi kami dalam menciptakan harmoni rasa yang sempurna dan tampilan yang memukau.</p>
         </div>
         <div class="flex gap-2">
             <img src={{ asset('img/koki.png') }} alt="">
