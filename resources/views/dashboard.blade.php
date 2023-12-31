@@ -75,10 +75,7 @@
                     <div class="carousel-item flex justify-center bg-white w-fit gap-4">
                         <div class="w-[70%] flex flex-col justify-center gap-3 border-2 rounded-xl border-gray-400 items-center py-4 shadow-xl">
                             <h1 class="font-extrabold text-6xl text-red-600">"</h1>
-                            <p class="text-semibold text-center">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quasi,
-                                itaque iusto quas maiores atque
-                                necessitatibus tempora repellat voluptas nisi ex!
+                            <p class="text-semibold text-center">Sangat terkesan dengan layanan Angelica Cafe! Pemesanan catering makanan untuk acara ulang tahun anak saya berjalan begitu lancar. Menu yang disajikan sangat lezat dan presentasinya memukau.
                             </p>
                             <span class="w-7 bg-gray-400 h-1"></span>
                             <div class="bg-gray-400 h-10 w-10 rounded-full"></div>
@@ -86,99 +83,50 @@
                         </div>
                         <div class="w-[70%] flex flex-col justify-center gap-3 border-2 rounded-xl border-gray-400 items-center py-4 shadow-xl">
                             <h1 class="font-extrabold text-6xl text-red-600">"</h1>
-                            <p class="text-semibold text-center">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quasi,
-                                itaque iusto quas maiores atque
-                                necessitatibus tempora repellat voluptas nisi ex!
+                            <p class="text-semibold text-center">Pertama kali memesan catering online dan Angelica Cafe membuat pengalaman ini begitu istimewa! Menu sangat beragam, dan saya mendapatkan layanan terbaik dalam memilih paket catering sesuai dengan acara keluaraga kami.
                             </p>
                             <span class="w-7 bg-gray-400 h-1"></span>
                             <div class="bg-gray-400 h-10 w-10 rounded-full"></div>
-                            <p class="text-lg">Abi</p>
+                            <p class="text-lg">Viena</p>
                         </div>
                         <div class="w-[70%] flex flex-col justify-center gap-3 border-2 rounded-xl border-gray-400 items-center py-4 shadow-xl">
                             <h1 class="font-extrabold text-6xl text-red-600">"</h1>
-                            <p class="text-semibold text-center">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quasi,
-                                itaque iusto quas maiores atque
-                                necessitatibus tempora repellat voluptas nisi ex!
+                            <p class="text-semibold text-center">Pemesanan catering di Angelica Cafe adalah keputusan terbaik yang saya buat untuk acara kantor kami. Menu yang disediakan sangat enak, dan website angelica cafe sangat mudah dijalani. Angelica Cafe membantu kami merancang paket catering yang sesuai dengan anggaran dan kebutuhan acara., Thank you angelica cafe!
                             </p>
                             <span class="w-7 bg-gray-400 h-1"></span>
                             <div class="bg-gray-400 h-10 w-10 rounded-full"></div>
-                            <p class="text-lg">Abi</p>
+                            <p class="text-lg">Kyandra</p>
                         </div>
                     </div>
 
                     <div class="carousel-item flex justify-center bg-white w-fit gap-4">
                         <div class="w-[70%] flex flex-col justify-center gap-3 border-2 rounded-xl border-gray-400 items-center py-4 shadow-xl">
                             <h1 class="font-extrabold text-6xl text-red-600">"</h1>
-                            <p class="text-semibold text-center">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quasi,
-                                itaque iusto quas maiores atque
-                                necessitatibus tempora repellat voluptas nisi ex!
+                            <p class="text-semibold text-center">Angelica Cafe memberikan lebih dari yang dijanjikan! Pilihan menu yang luar biasa, makanan yang lezat, dan staf yang ramah. Pemesanan online sangat mudah dan transparan. Harganya sangat sepadan dengan kualitas yang kami terima. Sangat merekomendasikan!
                             </p>
                             <span class="w-7 bg-gray-400 h-1"></span>
                             <div class="bg-gray-400 h-10 w-10 rounded-full"></div>
-                            <p class="text-lg">Abi</p>
+                            <p class="text-lg">Nanda</p>
                         </div>
                         <div class="w-[70%] flex flex-col justify-center gap-3 border-2 rounded-xl border-gray-400 items-center py-4 shadow-xl">
                             <h1 class="font-extrabold text-6xl text-red-600">"</h1>
-                            <p class="text-semibold text-center">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quasi,
-                                itaque iusto quas maiores atque
-                                necessitatibus tempora repellat voluptas nisi ex!
+                            <p class="text-semibold text-center">Angelica Cafe memberikan pengalaman catering yang tak terlupakan. Pemesanan online yang mudah, menu yang luar biasa, dan pelayanan pelanggan yang ramah. Hidangan mereka menciptakan kesan yang mendalam pada acara kami. Saya sangat merekomendasikan Angelica Cafe kepada semua orang yang mencari pesan catering online!!
                             </p>
                             <span class="w-7 bg-gray-400 h-1"></span>
                             <div class="bg-gray-400 h-10 w-10 rounded-full"></div>
-                            <p class="text-lg">Abi</p>
+                            <p class="text-lg">Falah</p>
                         </div>
                         <div class="w-[70%] flex flex-col justify-center gap-3 border-2 rounded-xl border-gray-400 items-center py-4 shadow-xl">
                             <h1 class="font-extrabold text-6xl text-red-600">"</h1>
-                            <p class="text-semibold text-center">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quasi,
-                                itaque iusto quas maiores atque
-                                necessitatibus tempora repellat voluptas nisi ex!
+                            <p class="text-semibold text-center">Angelica Cafe memberikan pengalaman catering yang istimewa untuk acara keluarga kami. Menu yang lezat dan variasi pilihan yang banyak. Pelayanan yang ramah. Terima kasih, Angelica Cafe, sudah membuat acara kami berjalan lancar!
                             </p>
                             <span class="w-7 bg-gray-400 h-1"></span>
                             <div class="bg-gray-400 h-10 w-10 rounded-full"></div>
-                            <p class="text-lg">Abi</p>
+                            <p class="text-lg">Hackertyz</p>
                         </div>
                     </div>
 
-                    <div class="carousel-item flex justify-center bg-white w-fit gap-4">
-                        <div class="w-[70%] flex flex-col justify-center gap-3 border-2 rounded-xl border-gray-400 items-center py-4 shadow-xl">
-                            <h1 class="font-extrabold text-6xl text-red-600">"</h1>
-                            <p class="text-semibold text-center">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quasi,
-                                itaque iusto quas maiores atque
-                                necessitatibus tempora repellat voluptas nisi ex!
-                            </p>
-                            <span class="w-7 bg-gray-400 h-1"></span>
-                            <div class="bg-gray-400 h-10 w-10 rounded-full"></div>
-                            <p class="text-lg">Abi</p>
-                        </div>
-                        <div class="w-[70%] flex flex-col justify-center gap-3 border-2 rounded-xl border-gray-400 items-center py-4 shadow-xl">
-                            <h1 class="font-extrabold text-6xl text-red-600">"</h1>
-                            <p class="text-semibold text-center">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quasi,
-                                itaque iusto quas maiores atque
-                                necessitatibus tempora repellat voluptas nisi ex!
-                            </p>
-                            <span class="w-7 bg-gray-400 h-1"></span>
-                            <div class="bg-gray-400 h-10 w-10 rounded-full"></div>
-                            <p class="text-lg">Abi</p>
-                        </div>
-                        <div class="w-[70%] flex flex-col justify-center gap-3 border-2 rounded-xl border-gray-400 items-center py-4 shadow-xl">
-                            <h1 class="font-extrabold text-6xl text-red-600">"</h1>
-                            <p class="text-semibold text-center">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quasi,
-                                itaque iusto quas maiores atque
-                                necessitatibus tempora repellat voluptas nisi ex!
-                            </p>
-                            <span class="w-7 bg-gray-400 h-1"></span>
-                            <div class="bg-gray-400 h-10 w-10 rounded-full"></div>
-                            <p class="text-lg">Abi</p>
-                        </div>
-                    </div>
+                   
 
                 </div>
                 {{-- <div
@@ -237,26 +185,26 @@
             <li><a href="">Lainnya</a></li>
         </ul> --}}
         <div class="w-full flex flex-wrap gap-3 mt-3 justify-center mb-8">
-            @for ($i = 0; $i < 8; $i++)
+            @foreach ($produks as $produk)
                 <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
                     <div class="card card-compact w-full bg-base-100 shadow-xl">
                         <figure>
                             <div class="absolute top-[10px] right-[15px]">
                                 <h1 class="py-2 text-semibold px-3 bg-white text-gray-400 rounded-xl">Rp.30.000</h1>
                             </div>
-                            <img class="object-cover" src={{ asset('/img/Menu_makanan.png') }} alt="Shoes" />
+                            <img class="object-cover" src="{{ asset('storage/img/produk/'.$produk->gambar) }}" alt="Shoes" />
                         </figure>
                         <div class="card-body">
-                            <h2 class="card-title font-bold">Nasi Kotak </h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                            <h2 class="card-title font-bold">{{$produk->nama_Produk}}</h2>
+                            <p>{{$produk->deskripsi}}</p>
                             <div class="card-actions justify-start">
-                                <button class="py-2 px-3 rounded-xl font-bold text-white bg-[#764507]">Add to
-                                    cart</button>
+                                <a href="{{route('cart.add',$produk->id_produk)}}" class="py-2 px-3 rounded-xl font-bold text-white bg-[#764507]">Add to
+                                    cart</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            @endfor
+            @endforeach
         </div>
         <h1 class="font-extrabold mb-24 text-center text-lg-center"><a href="">See All Menu</a></h1>
     </div>

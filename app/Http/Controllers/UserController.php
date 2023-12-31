@@ -22,7 +22,7 @@ class UserController extends Controller
         $validate = $request->validate([
             'first_name' => 'required',
             'last_name' => 'required',
-            'email' => 'required',
+            'email' => 'required|unique:users',
             'phone' => 'required'
           ]);
 
@@ -87,6 +87,13 @@ class UserController extends Controller
     }
 
     public function storeAddress(Request $request){
+        $request->validate([
+            'street' => 'required|string|max:255',
+            'city' => 'required|string|max:255',
+            'state' => 'required|string|max:255',
+            'postal_code' => 'required|string|max:10',
+        ]);
+
         $user = auth()->user();
 
         $address = Address::create([
@@ -97,13 +104,13 @@ class UserController extends Controller
             'postal_code' => $request->postal_code
         ]);
 
-        return redirect()->route('address.index')->with('success', 'Produk berhasil ditambah!');
+        return redirect()->route('address.index')->with('success', 'Address berhasil ditambah!');
     }
 
     public function updateProfilePicture(Request $request){
 
         $request->validate([
-            'profilePicture' => 'image|mimes:jpeg,jpg,png|max:1024', // Maksimal 1MB
+            'profilePicture' => 'image|mimes:jpeg,jpg,png|max:2048', // Maksimal 1MB
         ]);
 
         if ($request->file('profilePicture')) {

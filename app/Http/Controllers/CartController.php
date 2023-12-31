@@ -28,6 +28,7 @@ class CartController extends Controller
                 'id_produk' => $produks->id_produk,
                 'id_user' => $user->id,
                 'name' => $produks->nama_Produk,
+                'image' => $produks->gambar,
                 'quantity' => 1,
                 'price' => $produks->harga
             ];
@@ -38,6 +39,33 @@ class CartController extends Controller
 
         return redirect()->back()->with('success', 'Berhasil menambahkan ke cart');
 
+    }
+
+    public function updateCart(Request $request){
+        if($request->itemData){
+            $user = Auth::user();
+            session()->forget('cart_' . $user->id);
+            $data = $request->itemData;
+            foreach($data as $d){
+                $id = $d['id_produk'];
+                $produks = Produk::findOrFail($id);
+                // Mendapatkan pengguna yang sudah login
+                // Mengambil keranjang dari session pengguna yang sudah login
+                $cart = session()->get('cart_' . $user->id, []);
+                $cart[$id] = [
+                    'id_produk' => $produks->id_produk,
+                    'id_user' => $user->id,
+                    'name' => $produks->nama_Produk,
+                    'quantity' => $d['quantity'],
+                    'price' => $produks->harga
+                ];
+        
+                // Menyimpan keranjang ke dalam session
+                session()->put('cart_' . $user->id, $cart);
+            }
+            return true;
+        }
+        return false;
     }
 
     // View the cart

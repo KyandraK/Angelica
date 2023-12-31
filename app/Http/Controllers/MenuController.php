@@ -15,4 +15,14 @@ class MenuController extends Controller
         ]);
         
     }
+
+
+    public function menuUser(){
+        $produk = Produk::all();
+
+        return view('dashboard',[
+            'produks' => $produk
+        ]);
+    }
+
 }

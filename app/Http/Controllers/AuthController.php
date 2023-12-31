@@ -26,7 +26,7 @@ class AuthController extends Controller
         if($validate['password'] ==  $request->confirm_password){
             $password = bcrypt($validate['password']);
         }else{
-            return redirect('/register')->with('failed','Akun anda gagal didaftarkan ');
+            return back()->with('failed','Password tidak sama');
         }
 
         $user = User::create([
@@ -54,14 +54,27 @@ class AuthController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
-
+        
         if (Auth::attempt($credentials)) {
-            // Jika berhasil login, alihkan ke halaman yang sesuai
-            return redirect('/profile');
-           
-        }else{
+            $user = Auth::user();
+        
+            if ($user->id_role == 2) {
+                // Jika id_role adalah 2, alihkan ke halaman admin
+                return redirect('/admin');
+            } else {
+                // Jika id_role bukan 2, alihkan ke halaman profile
+                return redirect('/profile');
+            }
+        } else {
             return redirect()->back()->with('failed', 'Login gagal silahkan cek ulang');
         }
+        
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/');
     }
 
     // public function cekUser(){

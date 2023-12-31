@@ -1,9 +1,8 @@
 <div class="w-full h-[50vh] bg-[#EDDBC7] flex justify-between py-6 px-[10em]">
     <div class="w-1/2">
         <img src={{ asset('/img/Logo.png') }} alt="">
-        <p class="text-[#61677A] mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore
-            et dolore magna aliqua. </p>
+        <p class="text-[#61677A] mt-4">Angelica Cafe merupakan platform pemesanan catering makanan terkemuka yang menyajikan kuliner dengan sentuhan traditional dan pelayanan yang terbaik serta memberikan pengalaman pemesanan yang mudah dan cepat.
+        </p>
 
         <p class="text-[#61677A] mt-6">© 2023 Angelica Cafe | All rights reserved</p>
     </div>

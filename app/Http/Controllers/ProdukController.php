@@ -81,7 +81,6 @@ class ProdukController extends Controller
             'deskripsi' => 'required',
             'stok' => 'required|integer',
             'harga' => 'required|numeric',
-            
             'gambar' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Tambahkan validasi untuk gambar
         ]);
 

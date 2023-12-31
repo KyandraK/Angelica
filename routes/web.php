@@ -30,9 +30,11 @@ Route::get('/forgot', function () {
 Route::get('/signup', function () {
     return view('/auth/signup');
 });
-Route::get('/', function () {
-    return view('dashboard');
-});
+
+Route::get('/logout',[AuthController::class,'logout'])->name('logout');
+// Route::get('/', function () {
+//     return view('dashboard');
+// });
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -41,6 +43,7 @@ Route::get('/', function () {
 
 
 Route::get('/menu',[MenuController::class, 'index'])->name('indexMenu');
+Route::get('/',[MenuController::class, 'menuUser'])->name('menuUser');
 
 
 
@@ -65,7 +68,7 @@ Route::post('/login',[AuthController::class, 'login'])->name('login');
 Route::post('/signup',[AuthController::class, 'register'])->name('register');
 Route::get('/cekUser',[AuthController::class, 'cekUser'])->name('cekuser');
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware(['must-admin'])->group(function () {
     // Route untuk halaman utama admin
     Route::get('/', [AdminController::class, 'index'])->name('admin.home');
 
@@ -90,6 +93,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::put('/profile/update', [UserController::class, 'profileUpdate'])->name('profile.update');
     Route::get('/checkout', [CartController::class, 'checkout']);
+    Route::post('/cekot',[CartController::class,'order']);
     Route::post('/checkout/order', [CartController::class, 'order'])->name('checkout.order');
     Route::get('/profile/address', [UserController::class,'showAddress'])->name('address.index');
     Route::get('/profile/address/edit/{id}', [UserController::class,'editAddress'])->name('address.edit');
@@ -98,6 +102,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/profile/address/add', [UserController::class,'storeAddress'])->name('storeAddress');
     Route::put('/profile/update-profile-picture', [UserController::class, 'updateProfilePicture'])->name('profile.update-profile-picture');
     Route::get('/cart/{id}', [CartController::class, 'addItemToCart'])->name('cart.add');
+    Route::post('/updatecart',[CartController::class,'updateCart']);
     Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
     Route::get('/profile/transaction',[TransactionController::class,'showOrder'])->name('profile.transaction');
 });
